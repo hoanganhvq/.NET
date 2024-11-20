@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\CTU\\.NET\\Exercise\\UnitTest\\Staff\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Staff.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Staff.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\CTU\\.NET\\Exercise\\UnitTest\\Staff\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "D:\\CTU\\.NET\\Exercise\\UnitTest\\Staff\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\CTU\\.NET\\Exercise\\UnitTest\\Staff\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\CTU\\.NET\\Exercise\\UnitTest\\Staff\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Staff.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Staff.props",
+      "PackagePath": "build\\Staff.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Staff.props",
+      "PackagePath": "buildMultiTargeting\\Staff.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Staff.props",
+      "PackagePath": "buildTransitive\\Staff.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
