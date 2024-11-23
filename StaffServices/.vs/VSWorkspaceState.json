@@ -2,11 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\Base",
-    "\\Models",
+    "\\bin",
     "\\obj",
     "\\Properties",
     "\\Repositories"
   ],
-  "SelectedNode": "\\Properties\\launchSettings.json",
+  "SelectedNode": "\\Repositories\\EmployeeRepository.cs",
   "PreviewInSolutionExplorer": false
 }

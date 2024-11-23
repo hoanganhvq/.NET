@@ -391,3 +391,4 @@ D:\CTU\.NET\Exercise\UnitTest\StaffsAPI\obj\Debug\net8.0\refint\StaffServices.dl
 D:\CTU\.NET\Exercise\UnitTest\StaffsAPI\obj\Debug\net8.0\StaffServices.pdb
 D:\CTU\.NET\Exercise\UnitTest\StaffsAPI\obj\Debug\net8.0\StaffServices.genruntimeconfig.cache
 D:\CTU\.NET\Exercise\UnitTest\StaffsAPI\obj\Debug\net8.0\ref\StaffServices.dll
+D:\CTU\.NET\Exercise\UnitTest\StaffServices\obj\Debug\net8.0\StaffServices.sourcelink.json
