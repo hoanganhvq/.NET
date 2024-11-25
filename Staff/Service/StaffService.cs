@@ -12,9 +12,15 @@ namespace Staff.Services{
             return await httpClient.GetFromJsonAsync<Employee[]>("api/Employee");
         }
 
+        
+
         public async Task<Employee> GetEmployee(int employeeId){
            return  await httpClient.GetFromJsonAsync<Employee>($"api/Employee/{employeeId}");
             
+        }
+
+        public async Task<EmployeeDTO> GetEmployeeDTO(int employeeId){
+            return await httpClient.GetFromJsonAsync<EmployeeDTO>($"api/Employee/emp-dto/{employeeId}");
         }
 
         public async Task<HttpResponseMessage> AddEmployee(Employee employee){

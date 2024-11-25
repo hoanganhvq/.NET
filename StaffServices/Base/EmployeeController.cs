@@ -47,6 +47,28 @@ public class EmployeeController : ControllerBase
         }
     }
 
+
+    [HttpGet("emp-dto/{id2:int}")]
+    public async Task<ActionResult<EmployeeDTO>> GetEmployeeDTO (int id2)
+    {
+        try
+        {
+            var result = await employeeRepository.GetEmployeeDTO(id2);
+            if (result == null) return NotFound();
+            return result;
+        }
+
+        catch (Exception)
+        {
+            Console.WriteLine(id2);
+
+            return StatusCode(StatusCodes.Status500InternalServerError, "Error retrieving data from the database");
+        }
+
+    }
+
+
+
     [HttpPost]
     public async Task<ActionResult<Employee>> CreateEmployee(Employee employee)
     {

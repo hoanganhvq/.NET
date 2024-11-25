@@ -1,4 +1,4 @@
-﻿namespace StaffServices.Models;
+namespace Staff.Models;
 
 public partial class EmployeeDTO
 {

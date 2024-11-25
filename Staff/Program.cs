@@ -13,7 +13,7 @@ builder.Services.AddRazorComponents()
 
 builder.Services.AddScoped<IStaffService, StaffService>();
 
-builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("https://localhost:5010") });
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("https://localhost:5010") }); // Thay đổi port
 
 
 

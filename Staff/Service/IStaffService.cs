@@ -4,10 +4,11 @@ namespace Staff.Services{
     public interface IStaffService{
         Task<IEnumerable<Employee>>  GetEmployees();
         Task <Employee> GetEmployee(int employeeId);
-
+        Task <EmployeeDTO> GetEmployeeDTO (int employeeID);
         Task<HttpResponseMessage> AddEmployee(Employee employee);
 
        Task <HttpResponseMessage> DeleteEmployee(int employeeId);
-    Task<HttpResponseMessage> UpdateEmployee(Employee employee);
+        Task<HttpResponseMessage> UpdateEmployee(Employee employee);
+    
     }
 }

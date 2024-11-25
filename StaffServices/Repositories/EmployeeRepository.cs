@@ -27,7 +27,32 @@ namespace StaffServices.Repositories
 
         }
 
- 
+        public async Task<EmployeeDTO?> GetEmployeeDTO(int employeeId)
+        {
+            var employee = await staffsContext.Employees
+                .Include(e => e.Department)
+                .Include(e => e.Gender)
+                .FirstOrDefaultAsync(e => e.EmployeeId == employeeId);
+
+            if (employee == null) return null;
+
+            return new EmployeeDTO
+            {
+                EmployeeId = employee.EmployeeId,
+                FirstName = employee.FirstName,
+                LastName = employee.LastName,
+                Email = employee.Email,
+                DateOfBirth = employee.DateOfBirth,
+                DepartmentId = employee.DepartmentId ?? 0,
+                GenderId = employee.GenderId ?? 0,
+                DepartmentName = employee.Department?.DepartmentName,
+                GenderName = employee.Gender?.GenderDescription
+            };
+        }
+
+
+
+
         public async Task<Employee> AddEmployee(Employee employee)
         {
             var result = await staffsContext.Employees.AddAsync(employee);

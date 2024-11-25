@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Components;
 
 namespace Staff.Base{
     public class StaffDetailBase :ComponentBase{
-        public Employee staff { get; set; }  = new Employee();
+        public EmployeeDTO staff { get; set; }  = new EmployeeDTO();
         [Inject]
         public IStaffService StaffService { get; set; }
 
@@ -13,7 +13,7 @@ namespace Staff.Base{
         public string Id { get; set; }
         protected override async Task OnInitializedAsync(){
             Id = Id ?? "1";
-            staff = await StaffService.GetEmployee(int.Parse(Id));
+            staff = await StaffService.GetEmployeeDTO(int.Parse(Id));
         }
         public async Task DeleteStaff(int id){
             await StaffService.DeleteEmployee(id);
