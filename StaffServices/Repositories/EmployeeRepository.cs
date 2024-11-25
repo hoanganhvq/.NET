@@ -1,4 +1,4 @@
-using StaffServices.Models;
+﻿using StaffServices.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
@@ -21,9 +21,11 @@ namespace StaffServices.Repositories
 
         public async Task<Employee> GetEmployee(int employeeId)
         {
-        return (from employee in staffsContext.Employees
-                where employee.EmployeeId == employeeId
-                select employee).First();        }
+            return (from employee in staffsContext.Employees
+                    where employee.EmployeeId == employeeId
+                    select employee).First();
+
+        }
 
  
         public async Task<Employee> AddEmployee(Employee employee)
@@ -51,7 +53,7 @@ namespace StaffServices.Repositories
             return null;
         }
 
-         public async  Task<bool> DeleteEmployee(int id)
+         public async Task<bool> DeleteEmployee(int id)
     {
         var result= await staffsContext.Employees.FirstOrDefaultAsync(e => e.EmployeeId== id);
         if(result != null){

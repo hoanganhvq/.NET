@@ -1,4 +1,4 @@
-using System.Reflection.Metadata.Ecma335;
+﻿using System.Reflection.Metadata.Ecma335;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using StaffServices.Models;
@@ -15,7 +15,7 @@ public class EmployeeController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetEmployees()
+    public async Task<ActionResult<Employee[]>> GetEmployees()
     {
         try
         {

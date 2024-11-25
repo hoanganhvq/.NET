@@ -1,0 +1,53 @@
+@page "/addstaff"
+@rendermode InteractiveServer
+@inherits StaffBase
+
+<h3>Add New Employee</h3>
+
+<EditForm Model="@newEmployee" OnValidSubmit="AddEmployee">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div>
+        <label>First Name:</label>
+        <InputText @bind-Value="newEmployee.FirstName" />
+    </div>
+
+    <div>
+        <label>Last Name:</label>
+        <InputText @bind-Value="newEmployee.LastName" />
+    </div>
+
+    <div>
+        <label>Address:</label>
+        <InputText @bind-Value="newEmployee.Email" />
+    </div>
+
+    <div>
+        <label>Starting Date:</label>
+        <InputDate @bind-Value="newEmployee.DateOfBirth" />
+    </div>
+
+    <div>
+        <label>Education ID:</label>
+        <InputNumber @bind-Value="newEmployee.GenderId" />
+    </div>
+
+    <div>
+        <label>Department ID:</label>
+        <InputNumber @bind-Value="newEmployee.DepartmentId" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a href="/stafflist" class="btn btn-secondary">Back</a>
+</EditForm>
+
+@code {
+    private Employee newEmployee = new Employee();
+
+    private async Task AddEmployee()
+    {
+        await AddEmployee(newEmployee); 
+        Console.WriteLine("add employee Successfully");
+    }
+}

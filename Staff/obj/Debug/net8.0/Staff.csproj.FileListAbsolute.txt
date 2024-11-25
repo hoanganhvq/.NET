@@ -123,3 +123,4 @@ D:\CTU\.NET\Exercise\UnitTest\Staff\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPa
 D:\CTU\.NET\Exercise\UnitTest\Staff\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 D:\CTU\.NET\Exercise\UnitTest\Staff\bin\Debug\net8.0\Newtonsoft.Json.dll
 D:\CTU\.NET\Exercise\UnitTest\Staff\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+D:\CTU\.NET\Exercise\UnitTest\Staff\obj\Debug\net8.0\Staff.sourcelink.json

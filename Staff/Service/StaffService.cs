@@ -13,13 +13,17 @@ namespace Staff.Services{
         }
 
         public async Task<Employee> GetEmployee(int employeeId){
-            return await httpClient.GetFromJsonAsync<Employee>($"api/Employee/{employeeId}");
+           return  await httpClient.GetFromJsonAsync<Employee>($"api/Employee/{employeeId}");
+            
         }
 
         public async Task<HttpResponseMessage> AddEmployee(Employee employee){
             return await httpClient.PostAsJsonAsync<Employee>("api/Employee", employee);
         }
 
+        public async Task<HttpResponseMessage> UpdateEmployee(Employee employee){
+            return await httpClient.PutAsJsonAsync<Employee>($"api/Employee/{employee.EmployeeId}", employee);
+        }
         public async Task<HttpResponseMessage> DeleteEmployee(int EmployeeId){
             var respone   = await httpClient.DeleteAsync($"api/Employee/{EmployeeId}");
             try{

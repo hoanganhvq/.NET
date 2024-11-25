@@ -1,0 +1,45 @@
+@page "/editstaff/{id}"
+@inherits EditBase
+@rendermode InteractiveServer
+
+
+<h3>Edit Employee</h3>
+
+@if (staff != null)
+{
+    <EditForm Model="@staff" OnValidSubmit="UpdateStaff">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div>
+            <label>Name:</label>
+            <InputText @bind-Value="staff.FirstName" />
+        </div>
+          <div>
+            <label>Name:</label>
+            <InputText @bind-Value="staff.LastName" />
+        </div>
+        <div>
+            <label>Address:</label>
+            <InputText @bind-Value="staff.Email" />
+        </div>
+        <div>
+            <label>Starting Date:</label>
+            <InputDate @bind-Value="staff.DateOfBirth" />
+        </div>
+        <div>
+            <label>Education ID:</label>
+            <InputNumber @bind-Value="staff.GenderId" />
+        </div>
+        <div>
+            <label>Department ID:</label>
+            <InputNumber @bind-Value="staff.DepartmentId" />
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+        <a href="/stafflist" class="btn btn-secondary">Back</a>
+    </EditForm>
+}
+else
+{
+    <p>Loading...</p>
+}

@@ -21,10 +21,7 @@ builder.Services.AddControllers()
     .AddNewtonsoftJson(options =>
         options.SerializerSettings.PreserveReferencesHandling = Newtonsoft.Json.PreserveReferencesHandling.None);
         
-builder.Services.AddControllers().AddJsonOptions(options =>
-{
-    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
-});
+
 
 var app = builder.Build();
 

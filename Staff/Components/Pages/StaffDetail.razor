@@ -1,0 +1,34 @@
+@page "/staffdetails/{id}"
+@rendermode InteractiveServer
+@inherits StaffDetailBase
+@if (staff == null)
+{
+    <div class="spinner"></div>
+}
+else
+{
+    <div class="row justify-content-center m-3">
+        <div class="col-sm-5">
+            <div class="card">
+                <div class="card-header">
+                    <h1>@staff.FirstName @staff.LastName</h1>
+                </div>
+                <div class="card-body text-center">
+                    <h4>Staff ID: @staff.EmployeeId</h4>
+                    <h4>Email: @staff.Email</h4>
+                    <h4>BirthDate: @staff.DateOfBirth.ToString("d")</h4>
+                    <h4>Gender: @staff.GenderId</h4>
+                    <h4>Department: @staff.DepartmentId</h4>
+
+                </div>
+                <div class="card-footer text-center">
+                    <a href="/stafflist" class="btn btn-primary">Back</a>
+                    <a href="@($"editstaff/{staff.EmployeeId}")" class="btn btn-primary m-1">Edit</a>
+                        <button class="btn btn-danger m-1" @onclick="() => DeleteStaff(staff.EmployeeId)">
+                                                        Delete
+                                                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+}

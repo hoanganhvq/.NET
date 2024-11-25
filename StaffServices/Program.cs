@@ -1,4 +1,4 @@
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using StaffServices.Models;
 using StaffServices.Repositories;
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +12,15 @@ builder.Services.AddDbContext<StaffsContext>(options =>
 
 builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 builder.Services.AddControllers();
+
+
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.Preserve;
+        options.JsonSerializerOptions.WriteIndented = true; // (Tùy chọn) Format đẹp hơn
+    });
+
 
 var app = builder.Build();
 

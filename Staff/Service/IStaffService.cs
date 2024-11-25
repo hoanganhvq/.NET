@@ -8,6 +8,6 @@ namespace Staff.Services{
         Task<HttpResponseMessage> AddEmployee(Employee employee);
 
        Task <HttpResponseMessage> DeleteEmployee(int employeeId);
-
+    Task<HttpResponseMessage> UpdateEmployee(Employee employee);
     }
 }

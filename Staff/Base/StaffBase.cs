@@ -14,16 +14,17 @@ namespace Staff.Base{
         {
             Staffs = await StaffService.GetEmployees();
         }
+        protected async Task<Employee> GetEmployee(int id){
+            return await StaffService.GetEmployee(id);
+        }
 
         protected async Task DeleteEmployee(int employeeId){
             await StaffService.DeleteEmployee(employeeId);
-            //Referesh to show list one more time
             Staffs = await StaffService.GetEmployees();
         }
 
         protected async Task AddEmployee(Employee employee){
             await StaffService.AddEmployee(employee);
-            //Referesh to show list one more time
             Staffs = await StaffService.GetEmployees();
         }
     }

@@ -1,12 +1,16 @@
 @page "/stafflist"
+@rendermode InteractiveServer
 @inherits StaffBase
-
 @if(Staffs == null)
 {
     <div class="spinner">........</div>
 }
 else
 {
+      <div>
+        <!-- Add Employee Button -->
+        <a href="/addstaff" class="btn btn-success m-3">Add Employee</a>
+    </div>
     <div class="card-group">
         @foreach(var staff in Staffs)
         {
@@ -20,9 +24,9 @@ else
                         <a href="@($"editstaff/{staff.EmployeeId}")" class="btn btn-primary m-1">
                             Edit
                         </a>
-                        <button class="btn btn-danger m-1" onclick= "@DeleteEmployee(staff.EmployeeId)">
-                            Delete
-                        </button>
+                       <button class="btn btn-danger m-1" @onclick="() => DeleteEmployee(staff.EmployeeId)">
+                                Delete
+                            </button>
                     </div>
                 </div>
             </div>
